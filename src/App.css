@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+  list-style: none
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a{
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Header{
+  background-color: rgba(19, 9, 29, 0);
+  background: linear-gradient(black,rgba(0, 0, 0, 0));
+  color: white;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 8px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.Header > .Title {
+  left: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  cursor: pointer;
+  font-size: larger;
+}
+.Header > .Menu{
+  position: absolute;
+  display: flex;
+  gap: 40px;
+  top: 50%;
+  transform: translate(0,-50%);
+  right: 24px;
+}
+.Menu > li {
+  cursor: pointer;
+}
+.SlideShow{
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+}
+.SlideShow > img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  transition: opacity 1s ease-out;
+  /* -webkit-transition: opacity 0.5s ease-out;  
+  -moz-transition: opacity 0.5s ease-in-out;   */
+}
+.About{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 16px;
+  background-color: rgb(77, 12, 90);
+}
+@media only screen and (max-width:472px){
+  .Header > .Menu{
+    display: none;
   }
 }
